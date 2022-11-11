@@ -23,7 +23,6 @@
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  align-items: center;
   gap: 30px;
   margin-left: 35px;
   margin-right: 35px;
@@ -32,13 +31,60 @@
     width: 70vw;
     display: flex;
     flex-direction: column;
+    &__title {
+      color: $orange;
+      text-align: center;
+      padding: 15px;
+      font-size: 14pt;
+      font-weight: bold;
+    }
   }
   .section-favorites {
     border: 2px solid green;
     width: 30vw;
     display: flex;
     flex-direction: column;
+    &__title {
+      color: $orange;
+      text-align: center;
+      padding: 15px;
+      font-size: 14pt;
+      font-weight: bold;
+    }
   }
+}
+.js-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.article {
+  box-shadow: 0px 0px 5px 1px grey;
+  padding: 10px;
+  width: 140px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+.article.selected {
+  background-color: $selected-orange;
+}
+.characterPhoto {
+  width: 140px;
+  height: 150px;
+}
+.characterName {
+  font-weight: bolder;
+  color: $grey-character;
+}
+.characterStatus {
+  margin-top: 5px;
+  color: $grey-character;
 }
 .footer {
   position: fixed;
