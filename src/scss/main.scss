@@ -1,9 +1,21 @@
-/*@import 'core/variables';
+@import 'core/variables';
 @import 'core/reset';
-@import 'components/code';
-@import 'components/links';
-@import 'layout/page';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'pages/index';
-*/
+
+.header {
+  background-image: url(../images/hero.jpg);
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 0px 0px 5px 1px grey;
+  margin-left: 35px;
+  margin-right: 35px;
+  transform: translateY(-50%);
+  background-color: white;
+}
