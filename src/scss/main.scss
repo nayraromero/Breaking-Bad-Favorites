@@ -7,18 +7,34 @@
   background-position: center;
   background-size: cover;
 }
-
 .nav {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px;
   box-shadow: 0px 0px 5px 1px grey;
-  margin-left: 35px;
-  margin-right: 35px;
+  margin-left: 80px;
+  margin-right: 80px;
   transform: translateY(-50%);
   background-color: white;
   height: 40px;
+  .js-input {
+    border: 2px solid $orange;
+    width: 800px;
+    padding: 4px;
+    margin-right: 15px;
+  }
+  .js-input::placeholder {
+    font-weight: bold;
+  }
+  .btn-search {
+    background-color: $orange;
+    color: white;
+    font-size: 11px;
+    border: none;
+    padding: 7px;
+    cursor: pointer;
+  }
 }
 .main {
   display: flex;
@@ -54,56 +70,55 @@
       font-weight: bold;
     }
   }
-}
-.js-list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-.js-list-favorites {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-}
-.article {
-  box-shadow: 0px 0px 5px 1px grey;
-  padding: 10px;
-  width: 140px;
-  height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 7px;
-  cursor: pointer;
-}
-.article.selected {
-  background-color: $selected-orange;
-}
-.characterPhoto {
-  width: 140px;
-  height: 150px;
-}
-.characterName {
-  font-weight: bolder;
-  color: $grey-character;
-}
-.characterStatus {
-  margin-top: 5px;
-  color: $grey-character;
-}
-.icon {
-  transform: translateX(350%);
-  color: $orange;
-  font-size: large;
-}
-.icon.hidden {
-  display: none;
+  .js-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .js-list-favorites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .article {
+    box-shadow: 0px 0px 5px 1px grey;
+    padding: 10px;
+    width: 140px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+  }
+  .article.selected {
+    background-color: $selected-orange;
+  }
+  .icon {
+    transform: translateX(350%);
+    color: $orange;
+    font-size: large;
+  }
+  .icon.hidden {
+    display: none;
+  }
+  .characterPhoto {
+    width: 140px;
+    height: 150px;
+  }
+  .characterName {
+    font-weight: bolder;
+    color: $grey-character;
+  }
+  .characterStatus {
+    margin-top: 5px;
+    color: $grey-character;
+  }
 }
 .footer {
-  position: fixed;
+  position: sticky;
   bottom: 0;
   width: 100%;
   height: 30px;
@@ -111,4 +126,5 @@
   color: white;
   text-align: center;
   line-height: 30px;
+  font-size: small;
 }
