@@ -5,7 +5,7 @@ const btn = document.querySelector('.btn-search');
 const input = document.querySelector('.js-input');
 const characterListEl = document.querySelector('.js-list');
 const favoritesListEl = document.querySelector('.js-list-favorites');
-const closeIcon = document.querySelector('.icon');
+// const closeIcon = document.querySelector('.icon');
 let allCharacters = [];
 let favoriteCharacters = [];
 
