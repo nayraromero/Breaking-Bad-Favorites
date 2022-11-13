@@ -5,14 +5,32 @@ const btn = document.querySelector('.btn-search');
 const input = document.querySelector('.js-input');
 const characterListEl = document.querySelector('.js-list');
 const favoritesListEl = document.querySelector('.js-list-favorites');
-const form = document.querySelector('.form');
+const closeIcon = document.querySelector('.icon');
 let allCharacters = [];
 let favoriteCharacters = [];
 
 //FUNCIONES
 function renderOneCharacter(oneCharacter) {
-  let html = `<li>
-  <article class="article" id="${oneCharacter.char_id}">
+  const CharacterInFavoritesIndex = favoriteCharacters.findIndex(
+    (eachCharacterObj) =>
+      eachCharacterObj.char_id === parseInt(oneCharacter.char_id)
+  ); //comparamos el index del personaje y el de favoritos
+  let classFavorite = '';
+  let classHidden = '';
+  if (CharacterInFavoritesIndex === -1) {
+    //si no está en favoritos, no se le añade ninguna clase
+    classFavorite = '';
+    classHidden = 'hidden';
+  } else {
+    classFavorite = 'selected';
+    classHidden = '';
+    //si el seleccionado está en favoritos, se le añade la clase selected
+  }
+  let html =
+    /* se le añade la clase selected (classFavorite) en función de si el index no es -1 */
+    `<li>
+  <article class="article ${classFavorite}" id="${oneCharacter.char_id}">
+  <i class="fa-solid fa-circle-xmark icon ${classHidden}"></i>
     <img
       src=${oneCharacter.img} class="characterPhoto">
     <h3 class="characterName">${oneCharacter.name}</h3>
@@ -35,6 +53,7 @@ function renderAllCharacters(character) {
     articleCharacter.addEventListener('click', handleClick);
   }
 }
+
 function renderFavoritesCharacters() {
   let html = '';
   for (let i = 0; i < favoriteCharacters.length; i++) {
@@ -45,6 +64,7 @@ function renderFavoritesCharacters() {
 
 function handleClick(event) {
   event.currentTarget.classList.toggle('selected');
+  event.currentTarget.classList.toggle('hidden');
 
   const selectedCharacter = allCharacters.find(
     (eachCharacterObj) =>
@@ -70,6 +90,13 @@ function handleClick(event) {
     localStorage.setItem('favCharacter', JSON.stringify(favoriteCharacters));
   }
   renderFavoritesCharacters(); //pinta los favoritos
+
+  // closeIcon.addEventListener('click', () => {
+  //   debugger;
+  //   console.log('has hecho click en la cruz');
+  //   favoriteCharacters.splice(CharacterInFavoritesIndex, 1);
+  //   localStorage.setItem('favCharacter', JSON.stringify(favoriteCharacters));
+  // });
 }
 
 btn.addEventListener('click', (event) => {
