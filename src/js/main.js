@@ -144,7 +144,6 @@ function searchButton() {
 }
 
 function handleReset() {
-  console.log('has entrado en reset');
   localStorage.removeItem('favCharacter');
   favoriteCharacters.length = 0;
   renderFavoritesCharacters();
