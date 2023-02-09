@@ -2,7 +2,7 @@
 
 <img width="959" alt="image" src="./src/images/breakingBad.png">
 
-La creadora de este proyecto ha sido Nayra Romero - @nayraromero
+La creadora de este proyecto ha sido **Nayra Romero - @nayraromero**
 
 ## 🚀 Introducción y 📝 requerimientos
 
