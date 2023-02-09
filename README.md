@@ -1,5 +1,7 @@
 # Breaking Bad Finder
 
+<img width="959" alt="image" src="./src/images/breakingBad.png">
+
 La creadora de este proyecto ha sido Nayra Romero - @nayraromero
 
 ## 🚀 Introducción y 📝 requerimientos
@@ -24,11 +26,5 @@ Las tecnologías utilizadas durante este proyecto han sido:
 1. Haz click en la esquina superior derecha del repositorio en el botón **Fork**.
 2. Elige el usuario donde quieres ver el proyecto. **Choose your user**.
 3. **Ve a github.com/usuario/nombre-del-proyecto**, **clónalo** y ya podrás visualizarlo.
-
-## ✅ Resultado Final
-
-<div id="header" align="center">
-<img width="500" alt="image" src="./images/readme-image.png">
-</div>
 
 **Muchas gracias** 🤗
