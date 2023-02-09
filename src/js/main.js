@@ -7,6 +7,7 @@ const input = document.querySelector('.js-input');
 const characterListEl = document.querySelector('.js-list');
 const favoritesListEl = document.querySelector('.js-list-favorites');
 const resetButton = document.querySelector('.btn-reset');
+const buttonLog = document.querySelector('.btn-log');
 
 let allCharacters = [];
 let favoriteCharacters = [];
@@ -39,6 +40,7 @@ function renderOneCharacter(oneCharacter, iconFavorites) {
   html += `<img
       src=${oneCharacter.img} class="characterPhoto">
     <h3 class="characterName">${oneCharacter.name}</h3>
+    <p class="characterNickname">${oneCharacter.nickname}</p>
     <p class="characterStatus">${oneCharacter.status}</p>
   </article>
   </li>`;
@@ -113,7 +115,7 @@ function keepFavoritesArray(event) {
 }
 
 function getData() {
-  fetch('https://breakingbadapi.com/api/characters')
+  fetch('./assets/data/characters.json')
     .then((response) => response.json())
     .then((jsonData) => {
       allCharacters = jsonData;
@@ -159,4 +161,11 @@ btn.addEventListener('click', (event) => {
 resetButton.addEventListener('click', (event) => {
   event.preventDefault();
   handleReset();
+});
+
+buttonLog.addEventListener('click', (event) => {
+  event.preventDefault();
+  for (const characterName of favoriteCharacters) {
+    console.log(characterName.name);
+  }
 });
