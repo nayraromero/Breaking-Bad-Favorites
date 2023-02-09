@@ -165,7 +165,7 @@ resetButton.addEventListener('click', (event) => {
 
 buttonLog.addEventListener('click', (event) => {
   event.preventDefault();
-  for (const characterName of favoriteCharacters) {
-    console.log(characterName.name);
-  }
+  // for (const characterName of favoriteCharacters) {
+  //   console.log(characterName.name);
+  // }
 });
