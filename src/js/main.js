@@ -115,7 +115,7 @@ function keepFavoritesArray(event) {
 }
 
 function getData() {
-  fetch('https://breakingbadapi.com/api/characters')
+  fetch('./assets/data/characters.json')
     .then((response) => response.json())
     .then((jsonData) => {
       allCharacters = jsonData;
